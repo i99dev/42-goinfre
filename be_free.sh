@@ -8,6 +8,11 @@ ln -s ~/goinfre/Caches ~/Library/Caches
 
 # download latest version of vscode 
 curl -L https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal -o /tmp/vscode.zip
+# wait for download to finish
+while [ ! -f /tmp/vscode.zip ]
+do
+    sleep 1
+done
 
 # unzip vscode
 unzip /tmp/vscode.zip -d /tmp/vscode
