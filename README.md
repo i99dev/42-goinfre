@@ -16,11 +16,14 @@ and download chrome and vscode and also add to ~/goinfre and create shortcut to 
 
 Now I use only 40% from 5 gb of space , so I think this script is good to use.
 
-## How use 
+## How use this script ?
+ 
+clone this repository and run this script
 
 ```
 chmod +x be_free.sh
 ```
+
 ```
 $ ./be_free.sh
 ```
