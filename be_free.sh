@@ -6,25 +6,16 @@ mkdir -p ~/goinfre/Caches
 # create ln to Caches folder in /Library/Caches
 ln -s ~/goinfre/Caches ~/Library/Caches
 
-# download latest version of vscode 
-curl -L https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal -o /tmp/vscode.zip
+# download latest version of vscode
+curl -L https://code.visualstudio.com/sha/download\?build\=stable\&os\=darwin-universal -o /tmp/vscode.zip && unzip /tmp/vscode.zip -d ~/goinfre/
 # wait for download to finish
-while [ ! -f /tmp/vscode.zip ]
-do
-    sleep 1
-done
-
-# unzip vscode
-unzip /tmp/vscode.zip -d /tmp/vscode
-
-# move vscode to ~/goinfre/
-mv /tmp/vscode/Visual\ Studio\ Code.app /goinfre/Visual\ Studio\ Code.app
-
-# remove vscode.zip
-rm /tmp/vscode.zip
+# while [ ! -f /tmp/vscode.zip ]
+# do
+#     sleep 1
+# done
 
 # makealias for vscode
-ln -s ~/goinfre/Visual\ Studio\ Code.app ~/Desktop/Visual\ Studio\ Code.app
+ln -s ~/goinfre/Visual\ Studio\ Code.app /Desktop/Visual\ Studio\ Code.app
 
 # download latest version of Chrome
 curl -L https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg -o /tmp/googlechrome.dmg
