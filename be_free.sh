@@ -5,7 +5,7 @@ red="\e[31m"
 reset="\e[0m"
 
 # ask if user at 42 lab if yes continue, if no exit
-echo -e "${green}Are you in 42 lab?${reset}"
+echo -e "${green}Are you in a 42 lab?${reset}"
 read -p "y/n: " answer
 if [ "$answer" == "y" ]; then
     rm -rf ~/Library/Caches
