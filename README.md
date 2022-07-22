@@ -1,6 +1,6 @@
 # 42-goinfre  
 
-🚩any password or extension for vscode and chrome will be remove if you run this first time.
+🚩 about your password for github or discord ,etc ..., will be remove if you are save localey , but if you save cloud your password will be save 
 
 
 this script to fix issue with 42 lab imac space , every time i go to 42 lab to work I get error message like this:
