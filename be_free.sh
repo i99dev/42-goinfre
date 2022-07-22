@@ -8,8 +8,8 @@ reset="\e[0m"
 echo -e "${green}Are you in 42 lab?${reset}"
 read -p "y/n: " answer
 if [ "$answer" == "y" ]; then
+    mv ~/Library/Caches ~/goinfre/Caches
     rm -rf ~/Library/Caches
-    mkdir -p ~/goinfre/Caches
     ln -s ~/goinfre/Caches ~/Library/Caches
     curl -L https://code.visualstudio.com/sha/download\?build\=stable\&os\=darwin-universal -o /tmp/vscode.zip && unzip /tmp/vscode.zip -d ~/goinfre/
     ln -s ~/goinfre/Visual\ Studio\ Code.app /Desktop/Visual\ Studio\ Code.app
