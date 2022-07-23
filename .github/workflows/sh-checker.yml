@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name : install shellcheck and shfmt
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install shfmt
+      - name: formater code 
+        run: |
+          shfmt -i 2 -w $GITHUB_WORKSPACE
       - name: Run the sh-checker
         uses: luizm/action-sh-checker@master
         env:
@@ -21,5 +28,4 @@ jobs:
           SHFMT_OPTS: -s # arguments to shfmt.
         with:
           sh_checker_comment: true
-        run: shfmt -s -w filename
           
