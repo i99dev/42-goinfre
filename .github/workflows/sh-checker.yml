@@ -21,3 +21,5 @@ jobs:
           SHFMT_OPTS: -s # arguments to shfmt.
         with:
           sh_checker_comment: true
+        run: shfmt -s -w filename
+          
