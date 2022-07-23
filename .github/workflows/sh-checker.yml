@@ -13,19 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name : install shellcheck and shfmt
-        run: |
-          sudo apt-get update
-          sudo apt-get -y install shfmt
-      - name: formater code 
-        run: |
-          shfmt -i 2 -w $GITHUB_WORKSPACE
       - name: Run the sh-checker
         uses: luizm/action-sh-checker@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SHELLCHECK_OPTS: -e SC1004 # exclude some shellcheck warnings.
-          SHFMT_OPTS: -s # arguments to shfmt.
+          SHFMT_OPTS: -s -i 2 -w  # arguments to shfmt.
         with:
           sh_checker_comment: true
           
