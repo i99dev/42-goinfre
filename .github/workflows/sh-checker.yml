@@ -1,12 +1,20 @@
 name: example
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
 jobs:
   sh-checker:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: reformat code
+        run: shfmt -s -w *.sh
       - name: Run the sh-checker
         uses: luizm/action-sh-checker@master
         env:
@@ -15,4 +23,3 @@ jobs:
           SHFMT_OPTS: -s # arguments to shfmt.
         with:
           sh_checker_comment: true
-          sh_checker_exclude: ".terraform ^dir/example.sh"
