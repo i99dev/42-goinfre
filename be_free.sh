@@ -6,12 +6,12 @@ reset="\e[0m"
 
 # ask if user at 42 lab if yes continue, if no exit
 echo -e "${green}Are you in a 42 lab?${reset}"
-read -p "y/n: " answer
+read -p "y/n: " -r answer
 if [ "$answer" == "y" ]; then
     rm -rf ~/Library/Caches
     mkdir -p ~/goinfre/Caches
     ln -s ~/goinfre/Caches ~/Library/Caches
-    curl -L https://code.visualstudio.com/sha/download\?build\=stable\&os\=darwin-universal -o /tmp/vscode.zip && unzip /tmp/vscode.zip -d ~/goinfre/
+    curl -L https://code.visualstudio.com/sha/download\?build=stable\&os=darwin-universal -o /tmp/vscode.zip && unzip /tmp/vscode.zip -d ~/goinfre/
     ln -s ~/goinfre/Visual\ Studio\ Code.app /Desktop/Visual\ Studio\ Code.app
     curl -L https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg -o /tmp/googlechrome.dmg
     hdiutil attach /tmp/googlechrome.dmg

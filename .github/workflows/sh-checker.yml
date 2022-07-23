@@ -1,7 +1,13 @@
-name: example
+name: shell_check
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
 jobs:
   sh-checker:
     runs-on: ubuntu-latest
@@ -15,4 +21,5 @@ jobs:
           SHFMT_OPTS: -s # arguments to shfmt.
         with:
           sh_checker_comment: true
-          sh_checker_exclude: ".terraform ^dir/example.sh"
+          sh_checker_shfmt_disable: true
+          
