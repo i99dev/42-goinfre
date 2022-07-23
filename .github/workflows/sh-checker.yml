@@ -1,4 +1,4 @@
-name: example
+name: shell_check
 on:
   push:
     branches:
@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: reformat code
-        run: shfmt -s -w *.sh
       - name: Run the sh-checker
         uses: luizm/action-sh-checker@master
         env:
