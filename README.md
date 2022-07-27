@@ -2,7 +2,7 @@
 
 🚩 Any passwords saved locally will be deleted each time you run this script. Any passwords saved in a cloud or via Browser applications will remain intact.
 
-This script to fix the recurring issue with 42 lab iMac memory, every time I go to the 42 lab to work I get an error message like this:
+This script will fix the recurring issue with 42 lab iMac memory, every time I go to a 42 lab to work I get an error message like this:
 
 ```
 You don't have space
@@ -19,7 +19,7 @@ It will also download Chrome and VScode and also add them to ~/goinfre and creat
 
 Now only 40% of the memory from the available 5gb of space is used, so I think this script is good to use.
 
-## How to use this script ?
+## How to use this script?
 
 Simple! Clone this repository and run the script!
 
@@ -43,4 +43,4 @@ Or
 $ bash be_free.sh
 ```
 
-Now just take a deep breath 😁 everything done.
+Now just take a deep breath 😁 everything is done.

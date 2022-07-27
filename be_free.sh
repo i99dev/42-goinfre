@@ -18,8 +18,8 @@ if [ "$answer" == "y" ]; then
     cp -R /Volumes/Google\ Chrome/Google\ Chrome.app ~/goinfre/
     hdiutil detach /Volumes/Google\ Chrome
     ln -s ~/goinfre/Google\ Chrome.app ~/Desktop/Google\ Chrome.app
+    mv ~/Downloads ~/goinfre
     rm -rf ~/Downloads
-    mkdir -p ~/goinfre/Downloads
     ln -s ~/goinfre/Downloads ~/Downloads
 
     df -h
