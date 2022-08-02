@@ -11,15 +11,16 @@ if [ "$answer" == "y" ]; then
     rm -rf ~/Library/Caches
     mkdir -p ~/goinfre/Caches
     ln -s ~/goinfre/Caches ~/Library/Caches
+    rm  -rf ~/goinfre/Visual\ Studio\ Code.app
     curl -L https://code.visualstudio.com/sha/download\?build=stable\&os=darwin-universal -o /tmp/vscode.zip && unzip /tmp/vscode.zip -d ~/goinfre/
-    ln -s ~/goinfre/Visual\ Studio\ Code.app /Desktop/Visual\ Studio\ Code.app
+    ln -s ~/goinfre/Visual\ Studio\ Code.app ~/Desktop/Visual\ Studio\ Code.app
     curl -L https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg -o /tmp/googlechrome.dmg
     hdiutil attach /tmp/googlechrome.dmg
     cp -R /Volumes/Google\ Chrome/Google\ Chrome.app ~/goinfre/
     hdiutil detach /Volumes/Google\ Chrome
     ln -s ~/goinfre/Google\ Chrome.app ~/Desktop/Google\ Chrome.app
-    mv ~/Downloads ~/goinfre
     rm -rf ~/Downloads
+    mkdir -p ~/goinfre/Downloads
     ln -s ~/goinfre/Downloads ~/Downloads
 
     df -h
