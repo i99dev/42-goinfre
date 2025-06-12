@@ -43,4 +43,7 @@ Or
 $ bash be_free.sh
 ```
 
+### Options
+Run `./be_free.sh --help` to see optional flags that disable specific actions.
+
 Now just take a deep breath 😁 everything is done.
